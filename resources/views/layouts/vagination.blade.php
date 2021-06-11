@@ -25,4 +25,12 @@
         <i class="icon icon-angle-right s-18 pull-right"></i>
         </a>
     </li>
+
+    <li class="header light"><strong>Data</strong></li>
+    <li>
+        <a href="{{route('Perusahaan.data_perusahaan.index')}}">
+            <i class="icon icon-building blue-text s-18"></i> <span>Data Perusahaan</span>
+            <i class="icon icon-angle-right s-18 pull-right"></i>
+        </a>
+    </li>
 </ul>

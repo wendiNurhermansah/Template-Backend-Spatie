@@ -38,4 +38,19 @@ Route::prefix('MasterRole')->namespace('masterRole')->name('MasterRole.')->group
     Route::post('{id}/updatePassword', 'PenggunaController@updatePassword')->name('updatePassword');
 });
 
+Route::prefix('Perusahaan')->namespace('perusahaan')->name('Perusahaan.')->group(function(){
+    Route::resource('data_perusahaan', 'PerusahaanController');
+    Route::post('data_perusahaan/api', 'PerusahaanController@api')->name('data_perusahaan.api');
+
+    Route::get('kabupatenByProvinsi/{id}', 'PerusahaanController@kabupatenByProvinsi')->name('kabupatenByProvinsi');
+    Route::get('kecamatanByKabupaten/{id}', 'PerusahaanController@kecamatanByKabupaten')->name('kecamatanByKabupaten');
+    Route::get('kelurahanByKecamatan/{id}', 'PerusahaanController@kelurahanByKecamatan')->name('kelurahanByKecamatan');
+
+    Route::get('data_perusahaanExcel', 'PerusahaanController@excel')->name('data_perusahaan.data_perusahaanExcel');
+    Route::get('export_excel', 'PerusahaanController@export_excel')->name('data_perusahaan.export_excel');
+
+});
+
+
+
 
